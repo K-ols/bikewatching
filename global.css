@@ -1,1 +1,222 @@
-as
+
+/* =====================================
+   LAB 7: BIKEWATCHING
+   GLOBAL STYLES
+   ===================================== */
+
+/* General Page Styling */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font: 100%/1.5 system-ui, sans-serif;
+    background-color: #f3f7f8;
+    color: #142733;
+    min-height: 100vh;
+}
+
+/* =====================================
+   HEADER
+   ===================================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    padding: 20px 30px;
+
+    background-color: white;
+    border-bottom: 1px solid #dce5e9;
+}
+
+.header-title {
+    flex: 1;
+    min-width: 250px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: #215d70;
+}
+
+header p {
+    margin: 5px 0 0;
+    color: #596d76;
+    font-size: 0.95rem;
+}
+
+/* =====================================
+   TIME FILTER
+   ===================================== */
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    min-width: 250px;
+
+    font-weight: 600;
+    color: #215d70;
+}
+
+.filter strong {
+    min-height: 25px;
+    font-size: 1rem;
+}
+
+.filter time {
+    display: block;
+}
+
+.filter em {
+    display: block;
+    font-weight: 400;
+    font-style: italic;
+    color: #687c86;
+}
+
+.filter input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+    accent-color: #167b93;
+}
+
+/* =====================================
+   MAIN CONTENT
+   ===================================== */
+
+main {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+/* =====================================
+   TRAFFIC FLOW LEGEND
+   ===================================== */
+
+.legend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    margin: 15px 0;
+    padding: 12px;
+
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #dce5e9;
+}
+
+.legend span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.swatch {
+    display: inline-block;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.departures {
+    background-color: #2678b9;
+}
+
+.balanced {
+    background-color: #a188ac;
+}
+
+.arrivals {
+    background-color: #f38a30;
+}
+
+/* =====================================
+   DATA LOADING STATUS
+   ===================================== */
+
+#status {
+    margin: 10px 0;
+    min-height: 20px;
+
+    font-size: 0.9rem;
+    color: #426477;
+}
+
+/* =====================================
+   DESCRIPTION SECTION
+   ===================================== */
+
+.description {
+    margin-top: 20px;
+    padding: 20px 25px;
+
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #dce5e9;
+}
+
+.description h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: #215d70;
+}
+
+.description p {
+    margin-bottom: 12px;
+    color: #566873;
+    line-height: 1.7;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+   ===================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .filter {
+        width: 100%;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .legend {
+        gap: 12px;
+    }
+
+    .description {
+        padding: 15px;
+    }
+}
+
