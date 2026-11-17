@@ -1,1 +1,132 @@
-as
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bikewatching | Boston Bike Traffic</title>
+
+    <!-- Mapbox GL JS CSS -->
+    <link
+        href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+        rel="stylesheet"
+    >
+
+    <!-- Project Stylesheets -->
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="map.css">
+
+    <!-- Bike Favicon -->
+    <link
+        rel="icon"
+        href="assets/favicon.svg"
+        type="image/svg+xml"
+    >
+
+    <!-- Map JavaScript -->
+    <script src="map.js" type="module"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="header-title">
+            <h1>🚲 Bikewatching</h1>
+
+            <p>
+                Explore bike traffic across Boston and Cambridge
+                using Bluebikes trip data from March 2024.
+            </p>
+        </div>
+
+        <!-- TIME FILTER -->
+        <label for="time-slider" class="filter">
+
+            Filter by time:
+
+            <strong>
+                <time id="selected-time"></time>
+                <em id="any-time">(Any time)</em>
+            </strong>
+
+            <input
+                type="range"
+                id="time-slider"
+                min="-1"
+                max="1439"
+                step="15"
+                value="-1"
+            >
+
+        </label>
+
+    </header>
+
+    <!-- MAIN VISUALIZATION -->
+    <main>
+
+        <!-- MAP CONTAINER -->
+        <div id="map">
+            <svg></svg>
+        </div>
+
+        <!-- TRAFFIC FLOW LEGEND -->
+        <div class="legend">
+
+            <span>
+                <i class="swatch departures"></i>
+                More departures
+            </span>
+
+            <span>
+                <i class="swatch balanced"></i>
+                Balanced
+            </span>
+
+            <span>
+                <i class="swatch arrivals"></i>
+                More arrivals
+            </span>
+
+        </div>
+
+        <!-- DATA LOADING STATUS -->
+        <p id="status">
+            Loading bike traffic data...
+        </p>
+
+        <!-- VISUALIZATION DESCRIPTION -->
+        <section class="description">
+
+            <h2>Understanding the Visualization</h2>
+
+            <p>
+                This interactive map displays bike-sharing
+                activity across Boston and Cambridge.
+                Green lines represent bike lanes, while
+                circles represent individual Bluebikes stations.
+            </p>
+
+            <p>
+                Larger circles indicate stations with more
+                bike traffic. Circle colors show whether
+                stations experience more departures,
+                more arrivals, or balanced traffic.
+            </p>
+
+            <p>
+                Use the time slider to explore traffic
+                patterns throughout the day. Hover over
+                a station to view its total trips,
+                arrivals, and departures.
+            </p>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
